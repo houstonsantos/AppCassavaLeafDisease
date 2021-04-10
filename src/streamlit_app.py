@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 # Carregando modelo CNN
-leaf_model = load_model('./CassavaLeafDisease.h5')
+leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
 
 # Carregando arquivo de imagem do usuário
 uploaded_file = st.sidebar.file_uploader("Arraste ou faça upload de um arquivo JPG", type = ["jpg"])
