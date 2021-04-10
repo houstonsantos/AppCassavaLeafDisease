@@ -22,7 +22,7 @@ leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
 uploaded_file = st.sidebar.file_uploader("Arraste ou faça upload de um arquivo JPG", type = ["jpg"])
 
 # Definindo 2 colunas para o layout
-image = Image.open('../img/mandioca.jpeg')
+image = Image.open('/app/appcassavaleafdisease/img/mandioca.jpeg')
 col1, col2 = st.beta_columns(2)
 col1.title('Doença da Folha da Mandioca')
 col1.header('Predictive Machine')
