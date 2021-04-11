@@ -16,15 +16,15 @@ st.set_page_config(
 )
 
 # Carregando modelo CNN
-#leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
 #leaf_model = load_model('CassavaLeafDisease.h5')
+#leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
 
 # Carregando arquivo de imagem do usuário
 uploaded_file = st.sidebar.file_uploader("Arraste ou faça upload de um arquivo JPG", type = ["jpg"])
 
 # Definindo 2 colunas para o layout
-image = Image.open('/app/appcassavaleafdisease/img/mandioca.jpeg')
 #image = Image.open('../img/mandioca.jpeg')
+image = Image.open('/app/appcassavaleafdisease/img/mandioca.jpeg')
 col1, col2 = st.beta_columns(2)
 col1.title('Doença da Folha da Mandioca')
 col1.write('')
@@ -90,9 +90,19 @@ def leaf_predict(leaf: None) -> tuple:
                     sem registro.'''
     elif result == 2:
         disease = 'Cassava Green Mottle (CGM) :fallen_leaf:'
-        link = ''
+        link = 'https://www.pestnet.org/fact_sheets/cassava_green_mottle_068.htm'
         description = 'Traduzido do inglês - O vírus da mancha verde da mandioca é um vírus patogênico da planta da família Secoviridae.'
-        causer = ''
+        causer = '''As folhas severamente danificadas secam e caem, o que pode causar uma aparência característica de bastão de vela. 
+                    Devido ao crescimento reduzido da planta, o acúmulo de amido nas raízes de armazenamento é retardado, às vezes até revertido, 
+                    e as perdas de rendimento da raiz na ausência de quaisquer medidas de controle podem chegar a 50%. Onde as folhas são comidas 
+                    como vegetais pelos agricultores, ocorre uma perda correspondente. O crescimento reduzido e o atrofiamento das pontas também 
+                    são responsáveis ​​por hastes retorcidas e finas, prejudicando o material de plantio a ser utilizado na próxima safra.
+                    O tamanho das populações de CGM e, portanto, as perdas de rendimento, geralmente são influenciadas por vários fatores, 
+                    incluindo: (1) idade da planta hospedeira - as plantas jovens são mais expostas e suscetíveis a ataques de CGM 
+                    do que as plantas mais velhas; (2) estação - a gravidade dos danos é maior durante a estação seca do que chuvosa, e chuvas 
+                    fortes podem reduzir as populações de CGM, (3) a temperatura - as populações aumentam com o aumento da temperatura, levando 
+                    às vezes a um aumento muito rápido nas populações e danos, e (4) pobres práticas agronômicas - plantas cultivadas em solos 
+                    pobres são mais suscetíveis ao ataque de ácaros.'''
     elif result == 3 :
         disease = 'Cassava Mosaic Disease (CMD) :fallen_leaf:'
         link = 'https://plantix.net/pt/library/plant-diseases/200042/cassava-mosaic-disease'
@@ -120,8 +130,8 @@ def leaf_predict(leaf: None) -> tuple:
 if uploaded_file is not None:
 
     # Carregando modelo CNN
-    leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
     #leaf_model = load_model('CassavaLeafDisease.h5')
+    leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
     
     leaf = leaf_treatment(uploaded_file)
     leaf = leaf_predict(leaf)
