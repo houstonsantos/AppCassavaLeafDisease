@@ -16,15 +16,15 @@ st.set_page_config(
 )
 
 # Carregando modelo CNN
-leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
+#leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
 #leaf_model = load_model('CassavaLeafDisease.h5')
 
 # Carregando arquivo de imagem do usuário
 uploaded_file = st.sidebar.file_uploader("Arraste ou faça upload de um arquivo JPG", type = ["jpg"])
 
 # Definindo 2 colunas para o layout
-image = Image.open('/app/appcassavaleafdisease/img/mandioca.jpeg')
-#image = Image.open('../img/mandioca.jpeg')
+#image = Image.open('/app/appcassavaleafdisease/img/mandioca.jpeg')
+image = Image.open('../img/mandioca.jpeg')
 col1, col2 = st.beta_columns(2)
 col1.title('Doença da Folha da Mandioca')
 col1.write('')
@@ -118,6 +118,10 @@ def leaf_predict(leaf: None) -> tuple:
 
 # Página a ser exibida com os resultados
 if uploaded_file is not None:
+
+    # Carregando modelo CNN
+    #leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
+    leaf_model = load_model('CassavaLeafDisease.h5')
     
     leaf = leaf_treatment(uploaded_file)
     leaf = leaf_predict(leaf)
