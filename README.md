@@ -7,6 +7,10 @@ A inspiração para criação veio da competição [**CassavaLeafDisease**](http
 ### Resultados
 >A Solução tem uma acuracidade de 96%. Testes Realizados com um set de validação, imagens essas nunca vistas antes pelo modelo.
 
+<p align="center">
+    <img width="300" height="250" src="./img/mc.png">
+</p>
+
 ## Testando Aplicação
 
 1. Procure na internet imagens de folhas da mandioca, essas imagens precisam ser das doenças nos quais o algoritmo foi treinado para identificar, são elas: **Cassava Bacterial Blight (CBB)**, **Cassava Brown Streak Disease (CBSD)**, **Cassava Green Mottle (CGM)** e **Cassava Mosaic Disease (CMD)**.
