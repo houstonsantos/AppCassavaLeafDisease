@@ -13,10 +13,12 @@ A inspiração para criação veio da competição [**CassavaLeafDisease**](http
 
 ## Testando Aplicação
 
-1. Procure na internet imagens de folhas da mandioca, essas imagens precisam ser das doenças nos quais o algoritmo foi treinado para identificar, são elas: **Cassava Bacterial Blight (CBB)**, **Cassava Brown Streak Disease (CBSD)**, **Cassava Green Mottle (CGM)** e **Cassava Mosaic Disease (CMD)**.
+1. Acesse o [link](https://share.streamlit.io/houstonsantos/appcassavaleafdisease/src/streamlit_app.py)
+
+2. Procure na internet imagens de folhas da mandioca, essas imagens precisam ser das doenças nos quais o algoritmo foi treinado para identificar, são elas: **Cassava Bacterial Blight (CBB)**, **Cassava Brown Streak Disease (CBSD)**, **Cassava Green Mottle (CGM)** e **Cassava Mosaic Disease (CMD)**.
 
 <p align="center">
     <img width="800" height="500" src="./img/app.png">
 </p>
 
-1. Faça o upload da imagem, e verifique o resultado!
+3. Faça o upload da imagem, e verifique o resultado!
