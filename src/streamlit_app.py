@@ -17,14 +17,17 @@ st.set_page_config(
 
 # Carregando modelo CNN
 leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
+#leaf_model = load_model('CassavaLeafDisease.h5')
 
 # Carregando arquivo de imagem do usuário
 uploaded_file = st.sidebar.file_uploader("Arraste ou faça upload de um arquivo JPG", type = ["jpg"])
 
 # Definindo 2 colunas para o layout
 image = Image.open('/app/appcassavaleafdisease/img/mandioca.jpeg')
+#image = Image.open('../img/mandioca.jpeg')
 col1, col2 = st.beta_columns(2)
 col1.title('Doença da Folha da Mandioca')
+col1.write('')
 col1.header('Predictive Machine')
 col2.image(image)
 
@@ -33,7 +36,7 @@ with st.beta_expander('Informações', expanded = True):
     st.write('''O modelo tem como finalidade classificar o tipo da doença encontrada nas folhas da mandioca. Podendo ser elas, 
                 Cassava Bacterial Blight (CBB), Cassava Brown Streak Disease (CBSD), Cassava Green Mottle (CGM), Cassava Mosaic Disease (CMD)
                 e também identificar uma folha saudável. Fique a vontate para testar, procure imagens das doenças e teste.''')
-    st.write('O modelo atual tem uma acuracidade de 96%.')
+    st.write('O modelo tem uma acuracidade de 96%.')
 st.write('')
 
 
