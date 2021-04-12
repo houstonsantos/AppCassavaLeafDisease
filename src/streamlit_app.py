@@ -36,7 +36,7 @@ with st.beta_expander('Informações', expanded = True):
     st.write('''O modelo tem como finalidade classificar o tipo da doença encontrada nas folhas da mandioca. Podendo ser elas, 
                 Cassava Bacterial Blight (CBB), Cassava Brown Streak Disease (CBSD), Cassava Green Mottle (CGM), Cassava Mosaic Disease (CMD)
                 e também identificar uma folha saudável. Fique a vontate para testar, procure imagens das doenças e teste.''')
-    st.write('A Solução final teve média de acuracidade de 91% na validação cruzada e 96% no set de validação.')
+    st.write('A Solução final teve média de acuracidade de 91% na validação cruzada.')
     st.write('https://github.com/houstonsantos/AppCassavaLeafDisease')
 st.write('')
 
