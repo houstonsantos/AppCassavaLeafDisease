@@ -5,7 +5,7 @@ O Aplicativo consiste em uma solução de Machine Learning, na criação de uma 
 A inspiração para criação veio da competição [**CassavaLeafDisease**](https://www.kaggle.com/c/cassava-leaf-disease-classification) do **kaggle** e para elaboração do trabalho de conclusão de especialização em Ciência de Dados e Analytics da UPE - Universidade de Pernambuco.
 
 ### Resultados
->A Solução final teve média de acuracidade de 91% na validação cruzada e 96% no set de validação.
+>A Solução final teve média de acuracidade de 91% na validação cruzada.
 [Link GitHub](https://github.com/houstonsantos/CassavaLeafDisease)
 
 <p align="center">
