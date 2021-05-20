@@ -133,7 +133,8 @@ if __name__ == "__main__":
 
         # Carregando modelo CNN
         #leaf_model = load_model('CassavaLeafDisease.h5')
-        leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
+        #leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
+        leaf_model = load_model('CassavaLeafDisease.h5')
 
         leaf = leaf_treatment(uploaded_file)
         leaf = leaf_predict(leaf)
