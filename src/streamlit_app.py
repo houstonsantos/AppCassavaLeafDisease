@@ -127,23 +127,24 @@ def leaf_predict(leaf: None) -> tuple:
     return result, disease, description, causer, link
 
 
-# Página a ser exibida com os resultados
-if uploaded_file is not None:
+if __name__ == "__main__":
+    # Página a ser exibida com os resultados
+    if uploaded_file is not None:
 
-    # Carregando modelo CNN
-    #leaf_model = load_model('CassavaLeafDisease.h5')
-    leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
-    
-    leaf = leaf_treatment(uploaded_file)
-    leaf = leaf_predict(leaf)
-    img = Image.open(uploaded_file)
-    col3, col4 = st.beta_columns(2)
-    col3.write('')
-    col3.image(img)
-    col4.subheader(leaf[1])
-    col4.write(leaf[2])
-    col4.write(leaf[3])
-    
-    if leaf[0] != 4:
-        col4.markdown('**Consulte:**')
-        col4.write(leaf[4])
+        # Carregando modelo CNN
+        #leaf_model = load_model('CassavaLeafDisease.h5')
+        leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
+
+        leaf = leaf_treatment(uploaded_file)
+        leaf = leaf_predict(leaf)
+        img = Image.open(uploaded_file)
+        col3, col4 = st.beta_columns(2)
+        col3.write('')
+        col3.image(img)
+        col4.subheader(leaf[1])
+        col4.write(leaf[2])
+        col4.write(leaf[3])
+
+        if leaf[0] != 4:
+            col4.markdown('**Consulte:**')
+            col4.write(leaf[4])
