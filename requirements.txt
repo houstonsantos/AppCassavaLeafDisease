@@ -1,6 +1,6 @@
-numpy==1.19.5
+numpy
 tensorflow
 Keras
-streamlit==0.80.0
-pillow==8.2.0
+streamlit
+pillow
 h5py
