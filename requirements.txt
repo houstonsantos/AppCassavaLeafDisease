@@ -1,6 +1,6 @@
 numpy==1.19.5
-tensorflow>2.2.0
-Keras==2.4.3
+tensorflow
+Keras
 streamlit==0.80.0
-Pillow==8.2.0
+pillow==8.2.0
 h5py
