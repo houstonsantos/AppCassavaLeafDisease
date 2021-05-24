@@ -1,7 +1,7 @@
 import time
 import numpy as np
 import streamlit as st
-import tensorflow as ts
+#import tensorflow as ts
 from PIL import Image
 from keras.models import load_model
 from keras.preprocessing import image
@@ -134,7 +134,6 @@ if __name__ == "__main__":
         # Carregando modelo CNN
         #leaf_model = load_model('CassavaLeafDisease.h5')
         leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
-        #leaf_model = load_model('CassavaLeafDisease.h5')
 
         leaf = leaf_treatment(uploaded_file)
         leaf = leaf_predict(leaf)
