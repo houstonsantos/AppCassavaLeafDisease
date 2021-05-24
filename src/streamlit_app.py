@@ -1,7 +1,6 @@
 import time
 import numpy as np
 import streamlit as st
-#import tensorflow as ts
 from PIL import Image
 from keras.models import load_model
 from keras.preprocessing import image
@@ -14,10 +13,6 @@ st.set_page_config(
     layout = 'wide',
     initial_sidebar_state = 'expanded',
 )
-
-# Carregando modelo CNN
-#leaf_model = load_model('CassavaLeafDisease.h5')
-#leaf_model = load_model('/app/appcassavaleafdisease/src/CassavaLeafDisease.h5')
 
 # Carregando arquivo de imagem do usuário
 uploaded_file = st.sidebar.file_uploader("Arraste ou faça upload de um arquivo JPG", type = ["jpg"])
